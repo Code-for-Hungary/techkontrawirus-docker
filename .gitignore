@@ -1,0 +1,4 @@
+.env-app
+.env-db
+/techkontrawirus-mariadb-volume/*
+!/techkontrawirus-mariadb-volume/.gitignore

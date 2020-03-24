@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+  techkontrawirus-db:
+    image: mariadb
+    restart: always
+    container_name: techkontrawirus-db
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - "./techkontrawirus-mariadb-volume:/var/lib/mysql"
+    networks:
+      - techkontrawirus-net
+    env_file: .env-db
+
+  techkontrawirus-app:
+    build: techkontrawirus-app
+    networks:
+      - techkontrawirus-net
+    ports:
+      - 4321:80
+    container_name: techkontrawirus-app
+    restart: always
+    env_file: .env-app
+
+networks:
+  techkontrawirus-net:
+    ipam:
+      driver: default
