@@ -13,7 +13,7 @@ RUN apt-get update && apt-get upgrade -y && \
       git
 
 # Clone Github repo.
-RUN git clone https://github.com/epforgpl/techkontrawirus.git $HOME
+RUN git clone https://github.com/k-monitor/techkontrawirus.git $HOME
 
 # Make sure laravel.log is writable to both root and www-data (e.g. cron jobs).
 RUN touch ${HOME}/storage/logs/laravel.log \

@@ -1,12 +1,12 @@
 # Tech contra virus - Docker
 
 This repository contains the Docker code to make deploying the code in the related repo
-[https://github.com/epforgpl/techkontrawirus](https://github.com/epforgpl/techkontrawirus)
+[https://github.com/k-monitor/techkontrawirus](https://github.com/k-monitor/techkontrawirus)
 easier.
 
 ## Running
 
-    git clone https://github.com/epforgpl/techkontrawirus-docker.git
+    git clone https://github.com/k-monitor/techkontrawirus-docker.git
     cd techkontrawirus-docker
     cp .env-app.example .env-app
     cp .env-db.example .env-db
