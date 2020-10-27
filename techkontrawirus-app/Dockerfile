@@ -22,7 +22,7 @@ RUN touch ${HOME}/storage/logs/laravel.log \
 
 # Run composer
 ADD https://getcomposer.org/installer /tmp
-RUN php /tmp/installer --install-dir=/usr/local/bin --filename=composer && \
+RUN php /tmp/installer --install-dir=/usr/local/bin --filename=composer --version=1.10.16 && \
     cd $HOME && composer install && npm install && npm run production
 
 RUN chown -R application:application $HOME/storage/ && \
